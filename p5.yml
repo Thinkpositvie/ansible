@@ -1,0 +1,13 @@
+
+
+---
+ - hosts: dev
+   tasks:
+      - name: To  install a package 
+        apt: pkg=apache2 state=installed update_cache=true
+      - name: To start the apache2 service       
+        service: name=apache2 state=restarted
+      - name: To copy the file's 
+        copy: src=/root/playbook/index.html dest=/var/www/html
+
+

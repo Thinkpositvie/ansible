@@ -5,7 +5,7 @@
    tasks:
     - file:
        path: /etc/kelly
-       state: directory
+       state: absent
        owner: root
        group: root
        mode: 0644
