@@ -1,0 +1,16 @@
+
+
+---
+ - hosts: db
+   tasks:
+     - name: To in httpd package
+       apt:  pkg=apache2 state=installed update_cache=true
+     - name: To install multiple packages
+       apt: name={{item}} state=installed
+       with_items:
+         - php-xml
+         - php
+         - php-zip
+         - php-mbstring
+         - php-mysqlnd
+         - php-gd

@@ -1,0 +1,16 @@
+
+
+---
+ - hosts: web
+   tasks:
+     - name: To in httpd package
+       yum: pkg=httpd state=installed
+     - name: To install multiple packages
+       yum: name={{item}} state=installed
+       with_items:
+         - php-xml
+         - php
+         - php-zip
+         - php-mbstring
+         - php-mysqlnd
+         - php-gd

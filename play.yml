@@ -1,0 +1,9 @@
+
+
+---
+ - hosts: all
+   tasks:
+     
+     - name: TO create user
+       user: name=nagendra uid=566 group=root
+
