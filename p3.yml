@@ -1,0 +1,11 @@
+
+
+---
+ - hosts: dev
+   tasks:
+    - file:
+       path: /etc/foo.conf
+       state: touch
+       owner: root
+       group: root
+       mode: 0644
