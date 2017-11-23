@@ -1,0 +1,9 @@
+
+
+---
+  - hosts: all
+    tasks:
+    - name: TO create a file 
+      file: 
+        path: /tmp/nag
+        state: touch

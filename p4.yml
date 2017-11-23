@@ -1,0 +1,11 @@
+
+
+---
+ - hosts: all
+   tasks:
+    - file:
+       path: /etc/kelly
+       state: absent
+       owner: root
+       group: root
+       mode: 0644
